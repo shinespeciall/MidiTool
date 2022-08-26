@@ -24,9 +24,13 @@ private slots:
     void on_pushButton_LoadFile_clicked();
     void on_pushButton_MergeAllTracks_clicked();
     void on_pushButton_saveMidiFile_clicked();
+    void on_pushButton_merge_tracks_clicked();
 
 private:
     Ui::MidiToolMainWindow *ui;
-    MidiFile *midifile = nullptr;
+    MidiFile midifile;
+
+    // functions
+    void updateMidiFileDataToTextBox();
 };
 #endif // MIDITOOLMAINWINDOW_H
